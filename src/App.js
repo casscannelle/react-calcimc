@@ -6,12 +6,16 @@ function App() {
       <div className="form">
         <div className="container-input-label">
           <div className="children-container-input-label">
-            <label>Altura: </label>
-            <input/>
+            <label>Altura:</label>
+            <input placeholder='Digite sua altura'/>
           </div>
-        </div>
-        <div className="container-button">
+          <div className="children-container-input-label">
+            <label>Peso:</label>
+            <input placeholder='Digite seu peso'/>
+          </div>
+          <div className="container-button">
           <button>CALCULAR</button>
+        </div>
         </div>
       </div>
     </div>
