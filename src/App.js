@@ -8,18 +8,18 @@ function App () {
   const [imc, setImc] = useState('')
   const [message, setMessage] = useState('')
 
-  function calculator () {
-    setImc((weight / ( height * height )).toFixed(2))
-    console.log(imc)
-
-    if (imc < 18.5) {
-      setMessage('Classificação: Magreza')
-    } else if (imc >= 18.6 && imc <= 24.9) {
-      setMessage('Classificação: Normal')
-    } else if (imc >=25 && imc<= 29.9){
-      setMessage('Classificação: Sobrepeso')
-    } else if (imc > 30){
-      setMessage('Classificação: Obesidade')
+  function calculator() {
+    const calculatedImc = (weight / (height * height)).toFixed(2);
+    setImc(calculatedImc);
+  
+    if (calculatedImc < 18.5) {
+      setMessage('Classificação: Magreza');
+    } else if (calculatedImc >= 18.6 && calculatedImc <= 24.9) {
+      setMessage('Classificação: Normal');
+    } else if (calculatedImc >= 25 && calculatedImc <= 29.9) {
+      setMessage('Classificação: Sobrepeso');
+    } else if (calculatedImc > 30) {
+      setMessage('Classificação: Obesidade');
     }
   }
 
